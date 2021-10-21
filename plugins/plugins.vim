@@ -20,6 +20,7 @@ Plug 'christoomey/vim-tmux-navigator'
 "NERDTREE
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'ryanoasis/vim-devicons'
 "ChadTree (Nerdtree Alternative )
 Plug 'SirVer/ultisnips'
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
