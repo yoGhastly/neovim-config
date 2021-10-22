@@ -11,7 +11,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'marko-cerovac/material.nvim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'monsonjeremy/onedark.nvim'
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k

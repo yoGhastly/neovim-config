@@ -71,15 +71,18 @@ nmap <silent> <TAB>cl :Telescope colorscheme<CR>
 nmap <Leader>fb :Telescope file_browser<CR>
 " space ff find files
 nmap <Leader>ff :Telescope find_files<CR>
+nmap <Leader>gc :Telescope git_commits<CR>
 " Git config 
 " Git add all
 nmap <Leader>ga :Git add .<CR>
 nmap <Leader>sh :Git status --short<CR>
 nmap <Leader>gl :Git log<CR>
-nmap <Leader>gc :Telescope git_commits<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
+
+" space ic executes import cost in JS/React modules
+nmap <Leader>ic :ImportCost<CR>
 "open cocExplorer 
 "Buscar dos carácteres con easymotion
 "Search for two chars with easymotion
@@ -104,34 +107,14 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 "let g:gruvbox_contrast_dark = 'hard'
 set termguicolors     " enable true colors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"let ayucolor="light"  " for light version of theme
 let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"
 set background=dark
-let g:oceanic_material_allow_underline=1
-let g:airline_theme='ayu_dark'
-""let g:gruvbox_contrast_dark = "hard"
 let g:material_style = 'deep ocean'
 let g:shades_of_purple_airline = 1
 let g:airline_theme='shades_of_purple'
 let g:tokyonight_style = 'storm'
-let g:tokyonight_italic_comments = 1 
-let g:tokyonight_italic_keywords = 1 
-let g:tokyonight_italic_functions = 1 
 let g:tokyonight_transparent = 1
-
-lua << EOF
-require("onedark").setup({
-  functionStyle = "italic",
-	transparent = "true",
-  sidebars = {"qf", "vista_kind", "terminal", "packer"},
-
-  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  colors = {hint = "orange", error = "#ff0000"}
-})
-EOF
-"lua require('onedark').setup()
-colorscheme tokyonight
+colorscheme  tokyonight
 "Close tags automatically
 "Cerrar tags automaticamente
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
