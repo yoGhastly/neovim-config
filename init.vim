@@ -105,7 +105,7 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 
 "---------- COLORSCHEMES CONFIG ---------------
 "let g:gruvbox_contrast_dark = 'hard'
-set termguicolors     " enable true colors support
+set termguicolors     " enable truecolors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let ayucolor="mirage" " for mirage version of theme
 set background=dark
@@ -114,7 +114,7 @@ let g:shades_of_purple_airline = 1
 let g:airline_theme='shades_of_purple'
 let g:tokyonight_style = 'storm'
 let g:tokyonight_transparent = 1
-colorscheme  tokyonight
+colorscheme tokyonight 
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
