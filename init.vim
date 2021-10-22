@@ -115,6 +115,7 @@ let g:airline_theme='shades_of_purple'
 let g:tokyonight_style = 'storm'
 let g:tokyonight_transparent = 1
 colorscheme  tokyonight
+hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
