@@ -8,7 +8,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ayu-theme/ayu-vim' 
 Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'marko-cerovac/material.nvim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 "IDE
@@ -51,7 +50,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 "Smooth Scrolling
 Plug 'psliwka/vim-smoothie'
-Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
