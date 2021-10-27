@@ -10,11 +10,14 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'kien/rainbow_parentheses.vim'
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k
 "Navegar con C-h C-l C-j C-k
 Plug 'christoomey/vim-tmux-navigator'
+" Copilot
+Plug 'github/copilot.vim'
 "NERDTREE
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
