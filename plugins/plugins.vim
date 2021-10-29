@@ -10,7 +10,7 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'sainnhe/gruvbox-material'
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k

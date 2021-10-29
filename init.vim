@@ -109,19 +109,18 @@ set termguicolors     " enable truecolors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let ayucolor="mirage" " for mirage version of theme
 set background=dark
-let g:material_style = 'deep ocean'
 let g:shades_of_purple_airline = 1
-let g:airline_theme='shades_of_purple'
-let g:tokyonight_style = 'storm'
+"let g:airline_theme='shades_of_purple'
+let g:airline_theme='ayu_mirage'
+let g:tokyonight_style = 'night'
 let g:tokyonight_transparent = 1
-colorscheme tokyonight 
+colorscheme gruvbox-material 
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 "-----------------------------------------------------------------
 "------------------- Completions and that things -----------
-
 
 lua << EOF
 require'lspconfig'.pyright.setup{}
