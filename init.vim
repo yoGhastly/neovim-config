@@ -106,11 +106,12 @@ set background=dark
 let g:gruvbox_contrast_dark = 'soft'
 set termguicolors     " enable truecolors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let g:airline_theme='ayu_mirage'
 let g:airline_powerline_fonts = 1
 let g:tokyonight_style = 'storm'
 let g:tokyonight_transparent = 1
-let g:tokyonight_transparent_sidebar = 1
+let g:tokyonight_transparent_sidebar = 1 
+let g:tokyonight_transparent_tabline = 1
+let g:airline_theme = 'shades_of_purple'
 colorscheme tokyonight
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
