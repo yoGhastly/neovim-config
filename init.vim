@@ -22,8 +22,10 @@ let mapleader = " "
 set laststatus=2
 set backspace=2
 set guioptions-=T
-set guioptions-=L
+set guioptions-=l
+" nerdtree
 let g:NERDTreeQuitOnOpen = 1
+nmap <leader>nt :NERDTree<CR>
 "Get out of insert mode 
 "Salir de modo insertar
 imap jk <Esc>
@@ -61,9 +63,6 @@ let g:indentLine_char = '┆'
 let g:indentLine_faster = 1
 let g:indentLine_fileTypeExclude=["nerdtree"]
 
-"abrir Nerdtree
-"open nerdtree
-nmap <Leader>nt :NERDTree<CR>
 "change colorscheme with telescope
 " Space cl open colorschemes selector
 nmap <silent> <TAB>cl :Telescope colorscheme<CR>
@@ -97,24 +96,22 @@ nnoremap <silent> <S-TAB> :bprevious<CR>
 "close buffer
 "cerrar buffer
 nmap <leader>bd :bdelete<CR>
-"--gruvbox config--
 "Rest Client ESPACIO 0 
 noremap <Leader>0 :CocCommand rest-client.request <cr>
 
 
 
 "---------- COLORSCHEMES CONFIG ---------------
-"let g:gruvbox_contrast_dark = 'hard'
+set background=dark
+let g:gruvbox_contrast_dark = 'soft'
 set termguicolors     " enable truecolors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let ayucolor="mirage" " for mirage version of theme
-set background=dark
-let g:shades_of_purple_airline = 1
-"let g:airline_theme='shades_of_purple'
 let g:airline_theme='ayu_mirage'
-let g:tokyonight_style = 'night'
+let g:airline_powerline_fonts = 1
+let g:tokyonight_style = 'storm'
 let g:tokyonight_transparent = 1
-colorscheme gruvbox-material 
+let g:tokyonight_transparent_sidebar = 1
+colorscheme tokyonight
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
@@ -153,3 +150,5 @@ let g:compe.source.nvim_lua = v:true
 let g:compe.source.vsnip = v:true
 let g:compe.source.ultisnips = v:true
 let g:compe.source.luasnip = v:true
+
+
