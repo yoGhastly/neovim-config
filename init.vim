@@ -108,7 +108,6 @@ set termguicolors     " enable truecolors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let ayucolor = 'mirage'
 let g:tokyonight_transparent = 1
-let g:tokyonight_italic_variables = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'shades_of_purple'
 colorscheme tokyonight	 
@@ -119,13 +118,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 "-----------------------------------------------------------------
 "------------------- Completions and that things -----------
 
-lua << EOF
-require'lspconfig'.pyright.setup{}
-EOF
 
-lua << EOF
-require'lspconfig'.rust_analyzer.setup{}
-EOF
 let g:compe = {}
 let g:compe.enabled = v:true
 let g:compe.autocomplete = v:true
