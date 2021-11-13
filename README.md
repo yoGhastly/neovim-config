@@ -1,3 +1,4 @@
 # neovim-config
 My currently neovim dotfiles
-![code (2)](https://user-images.githubusercontent.com/78836469/141656769-2c0e7db8-4545-44bf-a71e-069784ee39df.png)
+
+![code](https://user-images.githubusercontent.com/78836469/141656959-22a0e9ca-6214-4900-ab5b-d46f0800349b.png)
