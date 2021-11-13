@@ -109,8 +109,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let ayucolor = 'mirage'
 let g:tokyonight_transparent = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'shades_of_purple'
-colorscheme tokyonight	 
+let g:airline_theme = 'nord_minimal'
+let g:nord_disable_background = 1
+colorscheme nord	 
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
