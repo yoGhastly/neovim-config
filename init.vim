@@ -13,7 +13,7 @@ set mouse=a
 set clipboard=unnamed
 set showcmd
 set ruler
-set cmdheight=1
+set cmdheight=2
 set encoding=UTF-8
 set showmatch
 set sw=2
@@ -42,7 +42,6 @@ vnoremap > >gv
 "-------------------------------Sources-------------------------------
 source ~/AppData/Local/nvim/plugins/plugins.vim
 source ~/AppData/Local/nvim/plugins/plug-config.vim
-source ~/AppData/Local/nvim/themes/onedark.vim
 "--------------------------------Plugins Config--------------------------------------------
 "save file
 "guardar archivo
@@ -111,7 +110,7 @@ let g:tokyonight_transparent = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'nord_minimal'
 let g:nord_disable_background = 1
-colorscheme nord	 
+colorscheme onenord	 
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
