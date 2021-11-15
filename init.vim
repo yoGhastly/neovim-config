@@ -13,7 +13,7 @@ set mouse=a
 set clipboard=unnamed
 set showcmd
 set ruler
-set cmdheight=2
+set cmdheight=1
 set encoding=UTF-8
 set showmatch
 set sw=2
@@ -23,6 +23,7 @@ set laststatus=2
 set backspace=2
 set guioptions-=T
 set guioptions-=l
+set termguicolors
 " nerdtree
 let g:NERDTreeQuitOnOpen = 1
 nmap <leader>nt :NERDTree<CR>
@@ -102,46 +103,17 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
-let g:gruvbox_contrast_dark = 'soft'
-set termguicolors     " enable truecolors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let ayucolor = 'mirage'
 let g:tokyonight_transparent = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'nord_minimal'
 let g:nord_disable_background = 1
-colorscheme onenord	 
+colorscheme onenord	
+let g:airline_theme = 'nord_minimal'
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 "-----------------------------------------------------------------
-"------------------- Completions and that things -----------
-
-
-let g:compe = {}
-let g:compe.enabled = v:true
-let g:compe.autocomplete = v:true
-let g:compe.debug = v:false
-let g:compe.min_length = 1
-let g:compe.preselect = 'enable'
-let g:compe.throttle_time = 80
-let g:compe.source_timeout = 200
-let g:compe.resolve_timeout = 800
-let g:compe.incomplete_delay = 400
-let g:compe.max_abbr_width = 100
-let g:compe.max_kind_width = 100
-let g:compe.max_menu_width = 100
-let g:compe.documentation = v:true
-
-let g:compe.source = {}
-let g:compe.source.path = v:true
-let g:compe.source.buffer = v:true
-let g:compe.source.calc = v:true
-let g:compe.source.nvim_lsp = v:true
-let g:compe.source.nvim_lua = v:true
-let g:compe.source.vsnip = v:true
-let g:compe.source.ultisnips = v:true
-let g:compe.source.luasnip = v:true
 
 
