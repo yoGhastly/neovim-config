@@ -21,6 +21,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'github/copilot.vim'
 "Airline
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'famiu/feline.nvim'
 "NERDTREE
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
@@ -70,4 +71,19 @@ Plug 'plasticboy/vim-markdown'
 call plug#end()
 lua << EOF
 require("bufferline").setup{}
+require('feline').setup({
+  colors = {
+    bg = '#4C566A',
+    fg = '#ECEFF4',
+    black = '#4C566A',
+    skyblue = '#4C566A',
+    cyan = '#8FBCBB',
+    green = '#A3BE8C',
+    oceanblue = '#EBCB8B',
+    yellow = '#e0af68',
+    orange = '#D08770',
+    red = '#BF616A',
+    violet = '#B48EAD',
+    }
+})
 EOF

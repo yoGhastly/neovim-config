@@ -12,4 +12,3 @@ require'colorizer'.setup(
 		-- Red Yellow LightBlue Green Gray Violet Purple Salmon 
 
   })
-
