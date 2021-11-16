@@ -10,7 +10,8 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+Plug 'shaunsingh/nord.nvim'
+Plug 'akinsho/bufferline.nvim'
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k
@@ -19,12 +20,10 @@ Plug 'christoomey/vim-tmux-navigator'
 " Copilot
 Plug 'github/copilot.vim'
 "Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'kyazdani42/nvim-web-devicons'
 "NERDTREE
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
-Plug 'ryanoasis/vim-devicons'
 "ChadTree (Nerdtree Alternative )
 Plug 'SirVer/ultisnips'
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
@@ -69,3 +68,6 @@ Plug 'vim-python/python-syntax'
 Plug 'plasticboy/vim-markdown'
 "_____________________________
 call plug#end()
+lua << EOF
+require("bufferline").setup{}
+EOF
