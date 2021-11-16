@@ -18,6 +18,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 " Copilot
 Plug 'github/copilot.vim'
+"Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "NERDTREE
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'

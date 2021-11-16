@@ -13,7 +13,7 @@ set mouse=a
 set clipboard=unnamed
 set showcmd
 set ruler
-set cmdheight=1
+set cmdheight=2
 set encoding=UTF-8
 set showmatch
 set sw=2
@@ -98,16 +98,17 @@ nnoremap <silent> <S-TAB> :bprevious<CR>
 nmap <leader>bd :bdelete<CR>
 "Rest Client ESPACIO 0 
 noremap <Leader>0 :CocCommand rest-client.request <cr>
-
-
-
+"Telescope buffers
+nmap <leader>tb :Telescope buffers<CR>
 "---------- COLORSCHEMES CONFIG ---------------
+let g:airline_theme = 'nord_minimal'
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let ayucolor = 'mirage'
 let g:tokyonight_transparent = 1
 let g:airline_powerline_fonts = 1
 let g:nord_disable_background = 1
+<<<<<<< HEAD
 colorscheme onenord	
 let g:lualine = {
     \'options' : {
@@ -135,6 +136,9 @@ let g:lualine = {
     \'extensions' : [ 'fzf' ],
     \}
 lua require("lualine").setup()
+=======
+colorscheme nord	
+>>>>>>> 0f93643 (airline and nord config changed)
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
