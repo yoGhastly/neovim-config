@@ -79,7 +79,7 @@ require('feline').setup({
     skyblue = '#4C566A',
     cyan = '#8FBCBB',
     green = '#A3BE8C',
-    oceanblue = '#EBCB8B',
+    oceanblue = '#4C566A',
     yellow = '#e0af68',
     orange = '#D08770',
     red = '#BF616A',
