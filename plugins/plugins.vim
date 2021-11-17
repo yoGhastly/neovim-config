@@ -74,7 +74,7 @@ require("bufferline").setup{}
 require('feline').setup({
   colors = {
     bg = '#4C566A',
-    fg = '#ECEFF4',
+    fg = '#eceff4',
     black = '#4C566A',
     skyblue = '#4C566A',
     cyan = '#8FBCBB',
