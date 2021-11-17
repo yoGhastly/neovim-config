@@ -109,6 +109,7 @@ let ayucolor = 'mirage'
 let g:tokyonight_transparent = 1
 let g:airline_powerline_fonts = 1
 let g:nord_disable_background = 1
+let g:nord_italic = 1
 colorscheme nord	
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
