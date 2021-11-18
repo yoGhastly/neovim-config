@@ -1,5 +1,3 @@
-# neovim-config 🌌
-My currently neovim dotfiles 👨‍💻
 
+![code](https://user-images.githubusercontent.com/78836469/142306692-7bb04295-9fb6-485c-a2ab-3f750a83de89.png)
 
-![code (1)](https://user-images.githubusercontent.com/78836469/142302306-d3ae5884-5e5c-4571-8062-a5e780d9bb71.png)
