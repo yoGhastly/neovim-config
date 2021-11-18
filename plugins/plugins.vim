@@ -25,6 +25,7 @@ Plug 'famiu/feline.nvim'
 "NERDTREE
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 "ChadTree (Nerdtree Alternative )
 Plug 'SirVer/ultisnips'
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
