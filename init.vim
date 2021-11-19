@@ -117,5 +117,18 @@ hi Normal guibg=NONE ctermbg=NONE
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 "-----------------------------------------------------------------
 
-" Bufferline config
+" nerdtree git config
+let g:NERDTreeGit_Show_Git_Branch = 1
 
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+		\ 'Modified'  :'📝',
+		\ 'Staged'    :'➕',
+		\ 'Untracked' :'⭐',
+		\ 'Renamed'   :'🖊',
+		\ 'Unmerged'  :'═',
+		\ 'Deleted'   :'❌',
+		\ 'Dirty'     :'✖ ',
+		\ 'Ignored'   :'📩',
+		\ 'Clean'     :'✔',
+		\ 'Unknown'   :'❓',
+		\ }
