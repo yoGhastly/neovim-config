@@ -119,16 +119,15 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 
 " nerdtree git config
 let g:NERDTreeGit_Show_Git_Branch = 1
-
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-		\ 'Modified'  :'📝',
-		\ 'Staged'    :'➕',
-		\ 'Untracked' :'⭐',
-		\ 'Renamed'   :'🖊',
-		\ 'Unmerged'  :'═',
-		\ 'Deleted'   :'❌',
-		\ 'Dirty'     :'✖ ',
-		\ 'Ignored'   :'📩',
-		\ 'Clean'     :'✔',
-		\ 'Unknown'   :'❓',
-		\ }
+                \ 'Modified'  :'*',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
