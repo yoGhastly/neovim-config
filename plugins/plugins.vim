@@ -79,7 +79,7 @@ local lsp = require 'feline.providers.lsp'
 
 local vi_mode_colors = {
   NORMAL = "#4C566A",
-  INSERT = "#eceff4",
+  INSERT = "#4C566A",
   VISUAL = "#8FBCBB",
   OP = "#A3BE8C",
   BLOCK = "#8FBCBB",
@@ -174,7 +174,7 @@ local comps = {
                   end,
             },
             right_sep = {
-                str = '',
+                str = ' ',
                 hl = function()
                     local val = {
                         fg = vi_mode_utils.get_mode_color(),
@@ -217,8 +217,8 @@ local comps = {
             left_sep = '',
             right_sep = '█',
             hl = {
-                fg = "#8FBCBB",
-                bg = "#eceff4"
+                fg = "#eceff4",
+                bg = "#e0af68"
             }
         },
         os = {
