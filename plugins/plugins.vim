@@ -2,13 +2,10 @@
 call plug#begin('~/.vim/plugged')
 " Temas
 " Theme:
-Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ayu-theme/ayu-vim' 
 Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'Rigellute/shades-of-purple.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'shaunsingh/nord.nvim'
 Plug 'akinsho/bufferline.nvim'
@@ -26,14 +23,9 @@ Plug 'famiu/feline.nvim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-"ChadTree (Nerdtree Alternative )
-Plug 'SirVer/ultisnips'
-Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-"Airline
-Plug 'nvim-lualine/lualine.nvim'
 " Stable version of coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Close pairs () [] {} ''

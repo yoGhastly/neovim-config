@@ -110,7 +110,10 @@ let g:tokyonight_transparent = 1
 let g:airline_powerline_fonts = 1
 let g:nord_disable_background = 1
 let g:nord_italic = 1
-colorscheme nord	
+let g:nord_bold = 1
+lua << EOF
+vim.cmd[[colorscheme tokyonight]]
+EOF
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
@@ -121,7 +124,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 let g:NERDTreeGit_Show_Git_Branch = 1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'*',
-                \ 'Staged'    :'✚',
+                \ 'Staged'    :'✚ ',
                 \ 'Untracked' :'✭',
                 \ 'Renamed'   :'➜',
                 \ 'Unmerged'  :'═',
