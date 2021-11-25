@@ -81,8 +81,6 @@ nnoremap <leader>gd :Gvdiff<CR>
 nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
 
-" space ic executes import cost in JS/React modules
-nmap <Leader>ic :ImportCost<CR>
 "open cocExplorer 
 "Buscar dos carácteres con easymotion
 "Search for two chars with easymotion
@@ -111,6 +109,7 @@ let g:airline_powerline_fonts = 1
 let g:nord_disable_background = 1
 let g:nord_italic = 1
 let g:nord_bold = 1
+let g:rainbow#max_level = 16 
 lua << EOF
 vim.cmd[[colorscheme tokyonight]]
 EOF
