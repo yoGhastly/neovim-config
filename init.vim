@@ -103,15 +103,10 @@ nmap <leader>tb :Telescope buffers<CR>
 let g:airline_theme = 'nord_minimal'
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let ayucolor = 'mirage'
 let g:tokyonight_transparent = 1
-let g:airline_powerline_fonts = 1
 let g:nord_disable_background = 1
-let g:nord_italic = 1
-let g:nord_bold = 1
-let g:rainbow#max_level = 16 
 lua << EOF
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme nord]]
 EOF
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically

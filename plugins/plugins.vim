@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 " Temas
 " Theme:
 Plug 'sheerun/vim-polyglot'
-Plug 'ayu-theme/ayu-vim' 
 Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
