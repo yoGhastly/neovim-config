@@ -100,7 +100,6 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 "Telescope buffers
 nmap <leader>tb :Telescope buffers<CR>
 "---------- COLORSCHEMES CONFIG ---------------
-let g:airline_theme = 'nord_minimal'
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:tokyonight_transparent = 1
