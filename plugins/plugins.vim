@@ -25,6 +25,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'SirVer/ultisnips'
 " Stable version of coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Close pairs () [] {} ''
