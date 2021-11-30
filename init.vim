@@ -106,6 +106,8 @@ let g:tokyonight_transparent = 1
 let g:nord_disable_background = 1
 lua << EOF
 vim.cmd[[colorscheme nord]]
+require 'nvim-treesitter.install'.compilers = { "clang" }
+require'nvim-treesitter'.setup()
 EOF
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically

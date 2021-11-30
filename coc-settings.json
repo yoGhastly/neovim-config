@@ -1,9 +1,10 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json"], 
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "typescript", "graphql", "html", "yaml",  "json", "javascriptreact"], 
   "explorer.width": 30,
   "prettier.singleQuote": true,
-  "prettier.semi": false,
+  "prettier.semi": true,
   "prettier.useTabs": true,
+  "prettier.jsxBracketSameLine": true, 
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings.global": {
