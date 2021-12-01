@@ -105,9 +105,25 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:tokyonight_transparent = 1
 let g:nord_disable_background = 1
 lua << EOF
-vim.cmd[[colorscheme nord]]
-require 'nvim-treesitter.install'.compilers = { "clang" }
-require'nvim-treesitter'.setup()
+vim.cmd[[colorscheme tokyonight]]
+--require('onenord').setup({
+--disable = {
+--	background = true
+--	}
+--})
+--require('palenightfall').setup()
+require 'nvim-treesitter.install'.compilers = { "gcc" }
+
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
 EOF
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
