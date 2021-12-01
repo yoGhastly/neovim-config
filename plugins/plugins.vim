@@ -6,9 +6,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'shaunsingh/nord.nvim'
 Plug 'akinsho/bufferline.nvim'
-Plug 'kyazdani42/nvim-palenight.lua'
+Plug 'JoosepAlviste/palenightfall.nvim'
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+Plug 'ayu-theme/ayu-vim'
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k
