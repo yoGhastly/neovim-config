@@ -80,7 +80,8 @@ nmap <Leader>gl :Git log<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
-
+inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
+nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
 "open cocExplorer 
 "Buscar dos carácteres con easymotion
 "Search for two chars with easymotion
@@ -105,6 +106,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:tokyonight_transparent = 1
 let g:nord_disable_background = 1
 lua << EOF
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_italic_comments = true
 vim.cmd[[colorscheme tokyonight]]
 --require('onenord').setup({
 --disable = {
@@ -113,7 +116,63 @@ vim.cmd[[colorscheme tokyonight]]
 --})
 --require('palenightfall').setup()
 require 'nvim-treesitter.install'.compilers = { "gcc" }
-
+local nvim_lsp = require('lspconfig')
+nvim_lsp.tsserver.setup {}
+-- icon
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    -- This sets the spacing and the prefix, obviously.
+    virtual_text = {
+      spacing = 4,
+      prefix = ''
+    }
+  }
+)
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  -- Mappings.
+  local opts = { noremap=true, silent=true }
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  --...
+end
+-- TypeScript
+nvim_lsp.tsserver.setup {
+  on_attach = on_attach
+} 
+local saga = require 'lspsaga'
+require("lspsaga").init_lsp_saga {
+				error_sign = '❌',
+				warn_sign = '⚠️',
+				hint_sign = '💡',
+				infor_sign = 'ℹ️',
+				dianostic_header_icon = ' 🚒 ',
+				code_action_icon = '💡',
+				code_action_keys = {
+					quit = '<esc>',
+					exec = '<cr>'
+				},
+				finder_definition_icon = '📖 ',
+				finder_reference_icon = '🔖 ',
+				finder_action_keys = {
+					open = '<cr>',
+					split = 's',
+					vsplit = 'v',
+					quit = '<esc>',
+					scroll_down = '<c-f>',
+					scroll_up = '<c-b>'
+				},
+				code_action_keys = {
+					quit = '<esc>',
+					exec = '<cr>'
+				},
+				rename_action_keys = {
+					quit = '<esc>',
+					exec = '<cr>'
+				},
+				definition_preview_icon = '📖 '
+			}
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -124,6 +183,7 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
 EOF
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically

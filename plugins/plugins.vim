@@ -10,6 +10,7 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'JoosepAlviste/palenightfall.nvim'
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
+Plug 'neovim/nvim-lspconfig'
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k
@@ -51,9 +52,7 @@ Plug 'junegunn/gv.vim'
 "Smooth Scrolling
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'psliwka/vim-smoothie'
-Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
-Plug 'kabouzeid/nvim-lspinstall'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
