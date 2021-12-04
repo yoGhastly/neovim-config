@@ -36,7 +36,7 @@ Plug 'honza/vim-snippets'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'SirVer/ultisnips'
 " Stable version of coc
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Close pairs () [] {} ''
 "Cerrar los pares () [] {} '' 
 Plug 'jiangmiao/auto-pairs'
