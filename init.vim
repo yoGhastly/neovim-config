@@ -138,6 +138,15 @@ end
 nvim_lsp.tsserver.setup {
   on_attach = on_attach
 } 
+local servers = { 'pyright', 'rust_analyzer', 'tsserver', 'cssls', 'html', 'json' }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    }
+  }
+end
 local saga = require 'lspsaga'
 require("lspsaga").init_lsp_saga {
 				error_sign = '❌',
