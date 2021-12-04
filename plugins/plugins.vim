@@ -11,6 +11,12 @@ Plug 'JoosepAlviste/palenightfall.nvim'
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'williamboman/nvim-lsp-installer'
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k
@@ -30,7 +36,7 @@ Plug 'honza/vim-snippets'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'SirVer/ultisnips'
 " Stable version of coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Close pairs () [] {} ''
 "Cerrar los pares () [] {} '' 
 Plug 'jiangmiao/auto-pairs'
