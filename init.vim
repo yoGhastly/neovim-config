@@ -80,16 +80,14 @@ nmap <Leader>gl :Git log<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
-inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
-nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
 "open cocExplorer 
 "Buscar dos carácteres con easymotion
 "Search for two chars with easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
-
 " TAB in general mode will move to text buffer
 " TAB en modo normal se moverá al siguiente buffer
 nnoremap <silent> <TAB> :bnext<CR>
+nmap <Leader>cs :CocDisable<CR>
 " SHIFT-TAB will go back
 " SHIFT-TAB va para atras 
 nnoremap <silent> <S-TAB> :bprevious<CR>
@@ -118,67 +116,6 @@ vim.cmd[[colorscheme tokyonight]]
 --})
 --require('palenightfall').setup()
 require 'nvim-treesitter.install'.compilers = { "gcc" }
-local nvim_lsp = require('lspconfig')
-nvim_lsp.tsserver.setup {}
--- icon
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    -- This sets the spacing and the prefix, obviously.
-    virtual_text = {
-      spacing = 4,
-      prefix = ''
-    }
-  }
-)
-local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-end
--- TypeScript
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach
-} 
-local servers = { 'pyright', 'rust_analyzer', 'tsserver', 'cssls', 'html', 'json' }
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    }
-  }
-end
-local saga = require 'lspsaga'
-require("lspsaga").init_lsp_saga {
-				error_sign = '❌',
-				warn_sign = '⚠️',
-				hint_sign = '💡',
-				infor_sign = 'ℹ️',
-				dianostic_header_icon = ' 🚒 ',
-				code_action_icon = '💡',
-				code_action_keys = {
-					quit = '<esc>',
-					exec = '<cr>'
-				},
-				finder_definition_icon = '📖 ',
-				finder_reference_icon = '🔖 ',
-				finder_action_keys = {
-					open = '<cr>',
-					split = 's',
-					vsplit = 'v',
-					quit = '<esc>',
-					scroll_down = '<c-f>',
-					scroll_up = '<c-b>'
-				},
-				code_action_keys = {
-					quit = '<esc>',
-					exec = '<cr>'
-				},
-				rename_action_keys = {
-					quit = '<esc>',
-					exec = '<cr>'
-				},
-				definition_preview_icon = '📖 '
-			}
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -190,6 +127,108 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+-------------------  LSP --------------------------
+
+local nvim_lsp = require('lspconfig')
+nvim_lsp.tsserver.setup {}
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  -- Mappings.
+  local opts = { noremap=true, silent=true }
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  --...
+end
+-- TypeScript
+nvim_lsp.tsserver.setup {
+  on_attach = on_attach
+} 
+
+local saga = require 'lspsaga'
+saga.init_lsp_saga {
+  error_sign = '',
+  warn_sign = '',
+  hint_sign = '',
+  infor_sign = '',
+  border_style = "round",
+}
+nvim_lsp.diagnosticls.setup {
+  on_attach = on_attach,
+  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
+  init_options = {
+    linters = {
+      eslint = {
+        command = 'eslint_d',
+        rootPatterns = { '.git' },
+        debounce = 100,
+        args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
+        sourceName = 'eslint_d',
+        parseJson = {
+          errorsRoot = '[0].messages',
+          line = 'line',
+          column = 'column',
+          endLine = 'endLine',
+          endColumn = 'endColumn',
+          message = '[eslint] ${message} [${ruleId}]',
+          security = 'severity'
+        },
+        securities = {
+          [2] = 'error',
+          [1] = 'warning'
+        }
+      },
+    },
+    filetypes = {
+      javascript = 'eslint',
+      javascriptreact = 'eslint',
+      typescript = 'eslint',
+      typescriptreact = 'eslint',
+    },
+    formatters = {
+      eslint_d = {
+        command = 'eslint_d',
+        args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
+        rootPatterns = { '.git' },
+      },
+      prettier = {
+        command = 'prettier',
+        args = { '--stdin-filepath', '%filename' }
+      }
+    },
+    formatFiletypes = {
+      css = 'prettier',
+      javascript = 'eslint_d',
+      javascriptreact = 'eslint_d',
+      json = 'prettier',
+      scss = 'prettier',
+      less = 'prettier',
+      typescript = 'eslint_d',
+      typescriptreact = 'eslint_d',
+      json = 'prettier',
+      markdown = 'prettier',
+    }
+  }
+}
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    -- This sets the spacing and the prefix, obviously.
+    virtual_text = {
+      spacing = 4,
+      prefix = ''
+    }
+  }
+)
+
+local on_attach = function(client, bufnr)
+  
+  if client.resolved_capabilities.document_formatting then
+    vim.api.nvim_command [[augroup Format]]
+    vim.api.nvim_command [[autocmd! * <buffer>]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    vim.api.nvim_command [[augroup END]]
+  end
+end
 EOF
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
