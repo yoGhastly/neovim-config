@@ -11,6 +11,12 @@ Plug 'JoosepAlviste/palenightfall.nvim'
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'williamboman/nvim-lsp-installer'
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k
