@@ -117,7 +117,6 @@ vim.cmd[[colorscheme tokyonight]]
 --})
 --require('palenightfall').setup()
 require 'nvim-treesitter.install'.compilers = { "gcc" }
-<<<<<<< HEAD
 local nvim_lsp = require('lspconfig')
 nvim_lsp.tsserver.setup {}
 -- icon
@@ -133,8 +132,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
   }
 )
-=======
->>>>>>> 73733d16f1b3b65ea76c3457abe3bcd472760674
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
