@@ -110,11 +110,6 @@ lua << EOF
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_italic_comments = true
 vim.cmd[[colorscheme tokyonight]]
---require('onenord').setup({
---disable = {
---	background = true
---	}
---})
 --require('palenightfall').setup()
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
