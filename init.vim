@@ -107,9 +107,16 @@ let ayucolor="mirage"
 let ayucolor_transparent = 1
 
 lua << EOF
-vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_italic_functions = false
 vim.g.tokyonight_italic_comments = true
-vim.cmd[[colorscheme tokyonight]]
+vim.g.ayu_mirage = true
+vim.g.ayu_avoid_italics = true
+vim.g.nord_italic = true
+vim.g.nord_contrast = true
+vim.g.nord_borders = false
+vim.g.nord_disable_background = true
+require('nord').set()
+--vim.cmd[[colorscheme tokyonight]]
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
 nvim_lsp.tsserver.setup {}
