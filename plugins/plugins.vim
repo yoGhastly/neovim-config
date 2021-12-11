@@ -8,8 +8,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'akinsho/bufferline.nvim'
 Plug 'JoosepAlviste/palenightfall.nvim'
-Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
-Plug 'ayu-theme/ayu-vim'
+Plug 'shaunsingh/nord.nvim'
+Plug 'CantoroMC/ayu-nvim'
+Plug 'monsonjeremy/onedark.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 "IDE
