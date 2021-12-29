@@ -115,8 +115,10 @@ vim.g.nord_italic = true
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
 vim.g.nord_disable_background = true
-require('nord').set()
---vim.cmd[[colorscheme tokyonight]]
+--require('onedark').setup({
+--	transparent = true
+--})
+vim.cmd[[colorscheme tokyonight]]
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
 nvim_lsp.tsserver.setup {}

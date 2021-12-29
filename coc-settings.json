@@ -1,6 +1,8 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "typescript", "graphql", "html", "yaml",  "json", "javascriptreact"], 
   "explorer.width": 30,
+  // diable diagnostic hintSign
+  "diagnostic.enableSign": false,
   "prettier.singleQuote": true,
   "prettier.semi": true,
   "prettier.useTabs": true,
