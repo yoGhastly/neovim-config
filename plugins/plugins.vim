@@ -9,7 +9,6 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'akinsho/bufferline.nvim'
 Plug 'JoosepAlviste/palenightfall.nvim'
 Plug 'shaunsingh/nord.nvim'
-Plug 'CantoroMC/ayu-nvim'
 Plug 'monsonjeremy/onedark.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -24,9 +23,9 @@ Plug 'github/copilot.vim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lualine/lualine.nvim'
 "NERDTREE
-Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'kyazdani42/nvim-tree.lua'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
@@ -67,5 +66,5 @@ call plug#end()
 lua << EOF
 require("bufferline").setup{}
 require('lualine').setup({
-  options = { theme = 'tokyonight' }
+  options = { theme = 'nord' }
 })

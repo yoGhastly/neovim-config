@@ -25,9 +25,6 @@ set guioptions-=T
 set guioptions-=l
 " In your init.lua or init.vim
 set termguicolors
-" nerdtree
-let g:NERDTreeQuitOnOpen = 1
-nmap <leader>nt :NERDTree<CR>
 "Get out of insert mode 
 "Salir de modo insertar
 imap jk <Esc>
@@ -98,6 +95,7 @@ nmap <leader>bd :bdelete<CR>
 noremap <Leader>0 :CocCommand rest-client.request <cr>
 "Telescope buffers
 nmap <leader>tb :Telescope buffers<CR>
+nnoremap <leader>nt :NvimTreeToggle<CR>
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -109,8 +107,6 @@ let ayucolor_transparent = 1
 lua << EOF
 vim.g.tokyonight_italic_functions = false
 vim.g.tokyonight_italic_comments = true
-vim.g.ayu_mirage = true
-vim.g.ayu_avoid_italics = true
 vim.g.nord_italic = true
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
@@ -118,7 +114,7 @@ vim.g.nord_disable_background = true
 --require('onedark').setup({
 --	transparent = true
 --})
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme nord]]
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
 nvim_lsp.tsserver.setup {}
@@ -145,12 +141,12 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+-- following options are the default
+-- each of these are documented in `:help nvim-tree.OPTION_NAME`
+require'nvim-tree'.setup {}
 EOF
 
 set completeopt=menuone,noinsert,noselect
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
