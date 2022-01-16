@@ -96,6 +96,22 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 "Telescope buffers
 nmap <leader>tb :Telescope buffers<CR>
 nnoremap <leader>nt :NvimTreeToggle<CR>
+let g:nvim_tree_quit_on_open = 1 
+" nerdtree git config
+let g:NERDTreeGit_Show_Git_Branch = 1
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'*',
+                \ 'Staged'    :'✚ ',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
+
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -154,20 +170,6 @@ hi Normal guibg=NONE ctermbg=NONE
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 "-----------------------------------------------------------------
 " Use completion-nvim in every buffer
-" nerdtree git config
-let g:NERDTreeGit_Show_Git_Branch = 1
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'*',
-                \ 'Staged'    :'✚ ',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
 
 lua << EOF
 local lsp_installer = require("nvim-lsp-installer")
