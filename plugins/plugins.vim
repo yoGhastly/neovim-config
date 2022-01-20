@@ -12,6 +12,7 @@ Plug 'shaunsingh/nord.nvim'
 Plug 'monsonjeremy/onedark.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'p00f/nvim-ts-rainbow' 
 "IDE
 Plug 'easymotion/vim-easymotion'
 "Navigate with C-h C-l C-j C-k
