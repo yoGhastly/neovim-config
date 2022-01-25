@@ -111,7 +111,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
-
+" command for quicktype passing args
+nnoremap <leader>j :!quicktype -l --args --just-types --top-level --args<CR>
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
