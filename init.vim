@@ -97,20 +97,6 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 nmap <leader>tb :Telescope buffers<CR>
 nnoremap <leader>nt :NvimTreeToggle<CR>
 let g:nvim_tree_quit_on_open = 1 
-" nerdtree git config
-let g:NERDTreeGit_Show_Git_Branch = 1
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'*',
-                \ 'Staged'    :'✚ ',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
 " command for quicktype passing args
 nnoremap <leader>j :!quicktype -l --args --just-types --top-level --args<CR>
 "---------- COLORSCHEMES CONFIG ---------------
@@ -118,9 +104,7 @@ set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:tokyonight_transparent = 1
 let g:nord_disable_background = 1
-let ayucolor="mirage"
-let ayucolor_transparent = 1
-
+let g:gruvbox_transparent_bg = 1
 lua << EOF
 vim.g.tokyonight_italic_functions = false
 vim.g.tokyonight_italic_comments = true
@@ -128,9 +112,6 @@ vim.g.nord_italic = true
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
 vim.g.nord_disable_background = true
---require('onedark').setup({
---	transparent = true
---})
 vim.cmd[[colorscheme nord]]
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
