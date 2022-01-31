@@ -111,28 +111,21 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
-" command for quicktype passing args
-nnoremap <leader>j :!quicktype -l typescript --just-types --top-level Interface<CR>
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:tokyonight_transparent = 1
 let g:nord_disable_background = 1
-let ayucolor="mirage"
-let ayucolor_transparent = 1
 
 lua << EOF
 vim.g.tokyonight_italic_functions = false
 vim.g.tokyonight_italic_comments = true
-vim.g.tokyonight_style == "day"
+vim.g.tokyonight_style == "storm"
 vim.g.nord_italic = true
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
 vim.g.nord_disable_background = true
---require('onedark').setup({
---	transparent = true
---})
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme nord]]
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
 nvim_lsp.tsserver.setup {}
@@ -176,7 +169,6 @@ require("nvim-treesitter.configs").setup {
     -- termcolors = {} -- table of colour name strings
   }
 }
-
 EOF
 
 set completeopt=menuone,noinsert,noselect
