@@ -97,6 +97,7 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 nmap <leader>tb :Telescope buffers<CR>
 nnoremap <leader>nt :NvimTreeToggle<CR>
 let g:nvim_tree_quit_on_open = 1 
+<<<<<<< HEAD
 " nerdtree git config
 let g:NERDTreeGit_Show_Git_Branch = 1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -111,12 +112,20 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
+=======
+" command for quicktype passing args
+nnoremap <leader>j :!quicktype -l --args --just-types --top-level --args<CR>
+>>>>>>> 76494b4
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:tokyonight_transparent = 1
 let g:nord_disable_background = 1
+<<<<<<< HEAD
 
+=======
+let g:gruvbox_transparent_bg = 1
+>>>>>>> 76494b4
 lua << EOF
 vim.g.tokyonight_italic_functions = false
 vim.g.tokyonight_italic_comments = true
