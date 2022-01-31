@@ -97,17 +97,39 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 nmap <leader>tb :Telescope buffers<CR>
 nnoremap <leader>nt :NvimTreeToggle<CR>
 let g:nvim_tree_quit_on_open = 1 
+<<<<<<< HEAD
 " command for quicktype passing args
 nnoremap <leader>j :!quicktype -l --args --just-types --top-level --args<CR>
+=======
+" nerdtree git config
+let g:NERDTreeGit_Show_Git_Branch = 1
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'*',
+                \ 'Staged'    :'✚ ',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
+>>>>>>> main
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:tokyonight_transparent = 1
 let g:nord_disable_background = 1
+<<<<<<< HEAD
 let g:gruvbox_transparent_bg = 1
+=======
+
+>>>>>>> main
 lua << EOF
 vim.g.tokyonight_italic_functions = false
 vim.g.tokyonight_italic_comments = true
+vim.g.tokyonight_style == "storm"
 vim.g.nord_italic = true
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
@@ -156,7 +178,6 @@ require("nvim-treesitter.configs").setup {
     -- termcolors = {} -- table of colour name strings
   }
 }
-
 EOF
 
 set completeopt=menuone,noinsert,noselect
