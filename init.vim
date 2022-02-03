@@ -116,13 +116,13 @@ nnoremap <leader>j :!quicktype -l --args --just-types --top-level --args<CR>
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let g:tokyonight_transparent = 1
 let g:nord_disable_background = 1
 let ayucolor="mirage"
 let ayucolor_transparent = 1
 
 lua << EOF
-vim.g.tokyonight_italic_functions = false
+vim.g.tokyonight_transparent = 1
+vim.g.tokyonight_transparent_sidebar = 1
 vim.g.tokyonight_italic_comments = true
 vim.g.nord_italic = true
 vim.g.nord_contrast = true
@@ -173,7 +173,7 @@ require("nvim-treesitter.configs").setup {
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
 		--colors = {}, -- table of hex strings
     -- termcolors = {} -- table of colour name strings
-  }
+  },
 }
 
 EOF
