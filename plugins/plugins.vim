@@ -9,7 +9,11 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'akinsho/bufferline.nvim'
 Plug 'JoosepAlviste/palenightfall.nvim'
 Plug 'shaunsingh/nord.nvim'
+<<<<<<< HEAD
 Plug 'marko-cerovac/material.nvim'
+=======
+Plug 'morhetz/gruvbox'
+>>>>>>> efe5d3430bdf776747881898e658c3927f7e7b03
 "IDE
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
