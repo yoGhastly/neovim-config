@@ -98,7 +98,8 @@ nmap <leader>tb :Telescope buffers<CR>
 nnoremap <leader>nt :NvimTreeToggle<CR>
 let g:nvim_tree_quit_on_open = 1 
 " command for quicktype passing args
-nnoremap <leader>j :!quicktype -l --args --just-types --top-level --args<CR>
+nnoremap <leader>j :!quicktype -l typescript --just-types --top-level Example<CR>
+nnoremap <leader>gb :Gitsigns blame_line<CR>
 "---------- COLORSCHEMES CONFIG ---------------
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -112,7 +113,7 @@ vim.g.nord_italic = true
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
 vim.g.nord_disable_background = true
-vim.g.material_style = 'palenight'
+vim.g.material_style = 'deep ocean'
 require('material').setup({
 
 	contrast = {
