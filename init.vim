@@ -126,8 +126,8 @@ require('material').setup({
 	},
 
 	italics = {
-		comments = false, -- Enable italic comments
-		keywords = false, -- Enable italic keywords
+		comments = true, -- Enable italic comments
+		keywords = true, -- Enable italic keywords
 		functions = false, -- Enable italic functions
 		strings = false, -- Enable italic strings
 		variables = false -- Enable italic variables

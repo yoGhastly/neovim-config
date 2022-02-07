@@ -8,10 +8,12 @@
 		"html",
 		"yaml",
 		"json",
-		"javascriptreact"
+		"javascriptreact",
+		"typescriptreact"
 	],
 	"explorer.width": 30,
 	"diagnostic.enableSign": false,
+	"diagnostic.enableMessage": "never",
 	"prettier.singleQuote": true,
 	"prettier.semi": true,
 	"prettier.useTabs": true,
