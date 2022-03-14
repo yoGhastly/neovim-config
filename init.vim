@@ -113,7 +113,7 @@ vim.g.nord_italic = true
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
 vim.g.nord_disable_background = true
-vim.g.material_style = 'deep ocean'
+vim.g.material_style = 'palenight'
 require('material').setup({
 
 	contrast = {
@@ -159,7 +159,10 @@ require('material').setup({
 vim.cmd[[colorscheme material]]
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
+
 nvim_lsp.tsserver.setup {}
+nvim_lsp.eslint.setup {}
+
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

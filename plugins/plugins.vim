@@ -27,9 +27,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'kyazdani42/nvim-tree.lua'
 " Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'SirVer/ultisnips'
+Plug 'L3MON4D3/LuaSnip'
 " Stable version of coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Close pairs () [] {} ''
@@ -56,7 +55,6 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'hrsh7th/vim-vsnip'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-python/python-syntax'
 Plug 'plasticboy/vim-markdown'
@@ -335,3 +333,4 @@ gitsigns.setup {
     enable = false,
   },
 }
+
