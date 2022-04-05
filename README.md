@@ -1,1 +1,2 @@
-![tokyonight](https://user-images.githubusercontent.com/78836469/144322862-cf3ed8c6-d689-4076-a327-9445f32d31fd.png)
+![Nord](https://user-images.githubusercontent.com/78836469/161870063-96bd0b34-4d1d-4435-a7dd-bc295db7b0d3.png)
+
