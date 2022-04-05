@@ -14,6 +14,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'p00f/nvim-ts-rainbow' 
 Plug 'easymotion/vim-easymotion'
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 "Navigate with C-h C-l C-j C-k
 "Navegar con C-h C-l C-j C-k
 Plug 'christoomey/vim-tmux-navigator'

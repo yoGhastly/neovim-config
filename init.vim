@@ -168,7 +168,6 @@ require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
 
 nvim_lsp.tsserver.setup {}
-nvim_lsp.eslint.setup {}
 
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
