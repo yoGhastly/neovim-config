@@ -108,12 +108,9 @@ lua << EOF
 vim.g.tokyonight_transparent = 1
 vim.g.tokyonight_transparent_sidebar = 1
 vim.g.tokyonight_italic_comments = true
+vim.g.tokyonight_italic_keywords = true
+vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_style = "storm"
-vim.g.nord_italic = true
-vim.g.nord_contrast = true
-vim.g.nord_borders = false
-vim.g.nord_disable_background = true
-vim.g.material_style = 'palenight'
 require('material').setup({
 
 	contrast = {
@@ -129,7 +126,7 @@ require('material').setup({
 	italics = {
 		comments = true, -- Enable italic comments
 		keywords = true, -- Enable italic keywords
-		functions = false, -- Enable italic functions
+		functions = true, -- Enable italic functions
 		strings = false, -- Enable italic strings
 		variables = false -- Enable italic variables
 	},
@@ -152,11 +149,21 @@ require('material').setup({
 		eob_lines = false -- Hide the end-of-buffer lines
 	},
 
-	lualine_style = "default", -- Lualine style ( can be 'stealth' or 'default' )
 
-	custom_highlights = {} -- Overwrite highlights with your own
+	async_loading = true -- Load parts of the theme asyncronously for faster startup (turned on by default)
+
 })
-vim.cmd[[colorscheme material]]
+vim.cmd[[colorscheme tokyonight]]
+require('onedark').setup {
+    style = 'deep',
+		transparent = true,
+		diagnostics = {
+			darker = false,
+			undercurl = true,
+			background = false,
+		}
+}
+--require('onedark').load()
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
 

@@ -7,7 +7,7 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'akinsho/bufferline.nvim'
-Plug 'shaunsingh/nord.nvim'
+Plug 'navarasu/onedark.nvim'
 Plug 'marko-cerovac/material.nvim'
 "IDE
 Plug 'neovim/nvim-lspconfig'
