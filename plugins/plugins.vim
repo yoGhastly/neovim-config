@@ -9,12 +9,12 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'akinsho/bufferline.nvim'
 Plug 'navarasu/onedark.nvim'
 Plug 'marko-cerovac/material.nvim'
+Plug 'andersevenrud/nordic.nvim'
 "IDE
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'p00f/nvim-ts-rainbow' 
 Plug 'easymotion/vim-easymotion'
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 "Navigate with C-h C-l C-j C-k
 "Navegar con C-h C-l C-j C-k
 Plug 'christoomey/vim-tmux-navigator'
@@ -284,7 +284,7 @@ ins_right {
 -- Now don't forget to initialize lualine
 lualine.setup(config)
 require('lualine').setup({
-  options = { theme = 'tokyonight' }
+  options = { theme = 'nord' }
 })
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
@@ -334,4 +334,4 @@ gitsigns.setup {
     enable = false,
   },
 }
-
+EOF

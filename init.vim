@@ -153,7 +153,7 @@ require('material').setup({
 	async_loading = true -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
 })
-vim.cmd[[colorscheme tokyonight]]
+--vim.cmd[[colorscheme tokyonight]]
 require('onedark').setup {
     style = 'deep',
 		transparent = true,
@@ -163,12 +163,18 @@ require('onedark').setup {
 			background = false,
 		}
 }
---require('onedark').load()
+require('nordic').colorscheme({
+    underline_option = 'none',
+    italic = true,
+    italic_comments = true,
+    minimal_mode = true,
+    alternate_backgrounds = false
+})
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
 
 nvim_lsp.tsserver.setup {}
-
+nvim_lsp.tailwindcss.setup {}
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

@@ -14,6 +14,7 @@
 	"explorer.width": 30,
 	"diagnostic.enableSign": false,
 	//"diagnostic.enableMessage": "never",
+	"tailwindCSS.includeLanguages": { "typescriptreact": "html", "javascriptreact": "html", "javascript": "html", "typescript": "html" },
 	"prettier.singleQuote": true,
 	"prettier.semi": true,
 	"prettier.useTabs": true,
