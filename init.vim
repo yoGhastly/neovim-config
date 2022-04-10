@@ -174,7 +174,6 @@ require 'nvim-treesitter.install'.compilers = { "gcc" }
 local nvim_lsp = require('lspconfig')
 
 nvim_lsp.tsserver.setup {}
-nvim_lsp.tailwindcss.setup {}
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
