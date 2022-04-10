@@ -40,7 +40,6 @@ vnoremap > >gv
 
 "-------------------------------Sources-------------------------------
 source ~/AppData/Local/nvim/plugins/plugins.vim
-source ~/AppData/Local/nvim/plugins/plug-config.vim
 "--------------------------------Plugins Config--------------------------------------------
 "save file
 "guardar archivo
@@ -52,7 +51,6 @@ nmap <leader>q :q <CR>
 nmap <leader>so :so%<CR>
 "search commands 
 "comandos de busqueda
-nmap <leader>gs  :CocSearch
 nmap <leader>fs :FZF<CR>
 nmap <leader>rg :Rg<CR>
 "configuracion de tabs
@@ -77,14 +75,12 @@ nmap <Leader>gl :Git log<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
-"open cocExplorer 
 "Buscar dos carácteres con easymotion
 "Search for two chars with easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
 " TAB in general mode will move to text buffer
 " TAB en modo normal se moverá al siguiente buffer
 nnoremap <silent> <TAB> :bnext<CR>
-nmap <Leader>cs :CocDisable<CR>
 " SHIFT-TAB will go back
 " SHIFT-TAB va para atras 
 nnoremap <silent> <S-TAB> :bprevious<CR>
@@ -171,9 +167,10 @@ require('nordic').colorscheme({
     alternate_backgrounds = false
 })
 require 'nvim-treesitter.install'.compilers = { "gcc" }
-local nvim_lsp = require('lspconfig')
+local lsp = require('lsp-zero')
 
-nvim_lsp.tsserver.setup {}
+lsp.preset('recommended')
+lsp.setup()
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

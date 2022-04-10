@@ -15,6 +15,20 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'p00f/nvim-ts-rainbow' 
 Plug 'easymotion/vim-easymotion'
+"Autocompletion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
+" Snippets
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
+
+" LSP Setup
+Plug 'VonHeikemen/lsp-zero.nvim'
+
 "Navigate with C-h C-l C-j C-k
 "Navegar con C-h C-l C-j C-k
 Plug 'christoomey/vim-tmux-navigator'
@@ -30,8 +44,6 @@ Plug 'kyazdani42/nvim-tree.lua'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'L3MON4D3/LuaSnip'
-" Stable version of coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Close pairs () [] {} ''
 "Cerrar los pares () [] {} '' 
 Plug 'jiangmiao/auto-pairs'
