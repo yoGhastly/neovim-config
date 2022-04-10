@@ -40,11 +40,13 @@ vnoremap > >gv
 
 "-------------------------------Sources-------------------------------
 source ~/AppData/Local/nvim/plugins/plugins.vim
+source ~/AppData/Local/nvim/plugins/plug-config.vim
 "--------------------------------Plugins Config--------------------------------------------
 "save file
 "guardar archivo
 nmap <leader>w :w <CR>
 "cerrar ventana
+"
 "close current  window
 nmap <C-w> :q <CR>
 nmap <leader>q :q <CR>
@@ -84,6 +86,7 @@ nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 " SHIFT-TAB va para atras 
 nnoremap <silent> <S-TAB> :bprevious<CR>
+nmap <Leader>cs :CocDisable<CR>
 "close buffer
 "cerrar buffer
 nmap <leader>bd :bdelete<CR>
@@ -149,7 +152,7 @@ require('material').setup({
 	async_loading = true -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
 })
---vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme tokyonight]]
 require('onedark').setup {
     style = 'deep',
 		transparent = true,
@@ -159,13 +162,6 @@ require('onedark').setup {
 			background = false,
 		}
 }
-require('nordic').colorscheme({
-    underline_option = 'none',
-    italic = true,
-    italic_comments = true,
-    minimal_mode = true,
-    alternate_backgrounds = false
-})
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local lsp = require('lsp-zero')
 
