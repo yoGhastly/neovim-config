@@ -208,9 +208,9 @@ require("nvim-treesitter.configs").setup {
   },
 }
 EOF
-
 set completeopt=menuone,noinsert,noselect
-
+let g:neoformat_try_node_exe = 1
+autocmd BufWritePre,TextChanged,InsertLeave *.js Neoformat
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
