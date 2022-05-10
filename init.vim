@@ -152,16 +152,8 @@ require('material').setup({
 	async_loading = true -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
 })
-vim.cmd[[colorscheme tokyonight]]
-require('onedark').setup {
-    style = 'deep',
-		transparent = true,
-		diagnostics = {
-			darker = false,
-			undercurl = true,
-			background = false,
-		}
-}
+vim.cmd[[colorscheme iceberg]]
+
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local lsp = require('lsp-zero')
 
