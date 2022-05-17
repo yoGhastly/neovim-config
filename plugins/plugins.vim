@@ -8,7 +8,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'akinsho/bufferline.nvim'
 Plug 'joshdick/onedark.vim'
-Plug 'cocopon/iceberg.vim'
+Plug 'morhetz/gruvbox'
 Plug 'marko-cerovac/material.nvim'
 Plug 'andersevenrud/nordic.nvim'
 "IDE
@@ -16,7 +16,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'p00f/nvim-ts-rainbow' 
 Plug 'easymotion/vim-easymotion'
-Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Autocompletion
 Plug 'hrsh7th/nvim-cmp'

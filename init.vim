@@ -110,6 +110,7 @@ vim.g.tokyonight_italic_comments = true
 vim.g.tokyonight_italic_keywords = true
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_style = "storm"
+vim.g.gruvbox_transparent_bg = true
 require('material').setup({
 
 	contrast = {
@@ -152,7 +153,7 @@ require('material').setup({
 	async_loading = true -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
 })
-vim.cmd[[colorscheme iceberg]]
+vim.cmd[[colorscheme gruvbox]]
 
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 local lsp = require('lsp-zero')
