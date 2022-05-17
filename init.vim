@@ -156,23 +156,6 @@ require('material').setup({
 vim.cmd[[colorscheme gruvbox]]
 
 require 'nvim-treesitter.install'.compilers = { "gcc" }
-local lsp = require('lsp-zero')
-
-lsp.preset('recommended')
-lsp.setup()
--- icon
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    -- This sets the spacing and the prefix, obviously.
-    virtual_text = {
-      spacing = 4,
-      prefix = '',
-			signs = true,
-			update_in_insert = true
-    }
-  }
-)
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -180,7 +163,7 @@ require'nvim-treesitter.configs'.setup {
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = true,
   },
 }
 -- following options are the default
@@ -200,6 +183,24 @@ require("nvim-treesitter.configs").setup {
     -- termcolors = {} -- table of colour name strings
   },
 }
+
+local lsp = require('lsp-zero')
+
+lsp.preset('recommended')
+lsp.setup()
+-- icon
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    -- This sets the spacing and the prefix, obviously.
+    virtual_text = {
+      spacing = 4,
+      prefix = '',
+			signs = true,
+			update_in_insert = true
+    }
+  }
+)
 EOF
 set completeopt=menuone,noinsert,noselect
 let g:neoformat_try_node_exe = 1
