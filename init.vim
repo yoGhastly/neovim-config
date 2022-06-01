@@ -111,6 +111,7 @@ vim.g.tokyonight_italic_keywords = true
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_style = "storm"
 vim.g.gruvbox_transparent_bg = true
+vim.g.gruvbox_italic = true
 require('material').setup({
 
 	contrast = {
@@ -204,7 +205,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 EOF
 set completeopt=menuone,noinsert,noselect
 let g:neoformat_try_node_exe = 1
-autocmd BufWritePre,TextChanged,InsertLeave *.js Neoformat
 hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
