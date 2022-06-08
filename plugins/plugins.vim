@@ -296,7 +296,7 @@ ins_right {
 -- Now don't forget to initialize lualine
 lualine.setup(config)
 require('lualine').setup({
-  options = { theme = 'tokyonight' }
+  options = { theme = 'gruvbox' }
 })
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
