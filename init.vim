@@ -95,7 +95,6 @@ noremap <Leader>0 :CocCommand rest-client.request <cr>
 "Telescope buffers
 nmap <leader>tb :Telescope buffers<CR>
 nnoremap <leader>nt :NvimTreeToggle<CR>
-let g:nvim_tree_quit_on_open = 1 
 " command for quicktype passing args
 nnoremap <leader>j :!quicktype -l typescript --just-types --top-level Example<CR>
 nnoremap <leader>gb :Gitsigns blame_line<CR>
@@ -169,7 +168,13 @@ require'nvim-treesitter.configs'.setup {
 }
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
-require'nvim-tree'.setup {}
+require'nvim-tree'.setup {
+	actions = {
+		open_file = {
+			quit_on_open = true
+		}
+	}
+}
 require("nvim-treesitter.configs").setup {
   highlight = {
       -- ...
