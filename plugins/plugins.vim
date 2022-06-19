@@ -3,20 +3,17 @@ call plug#begin('~/.vim/plugged')
 " Temas
 " Theme:
 Plug 'sheerun/vim-polyglot'
-Plug 'mlaursen/vim-react-snippets'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'akinsho/bufferline.nvim'
-Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
-Plug 'marko-cerovac/material.nvim'
-Plug 'andersevenrud/nordic.nvim'
+Plug 'projekt0n/github-nvim-theme'
 "IDE
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'p00f/nvim-ts-rainbow' 
 Plug 'easymotion/vim-easymotion'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 "Autocompletion
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
@@ -296,7 +293,7 @@ ins_right {
 -- Now don't forget to initialize lualine
 lualine.setup(config)
 require('lualine').setup({
-  options = { theme = 'gruvbox' }
+  options = { theme = 'tokyonight' }
 })
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
@@ -407,4 +404,6 @@ nvim_lsp.diagnosticls.setup {
     }
   }
 }
+
+require("luasnip.loaders.from_vscode").lazy_load { paths = { "../lua/snippets/typescript/" } }
 EOF
