@@ -65,8 +65,17 @@ packer.startup(function(use)
 
       -- Snippets
       { 'L3MON4D3/LuaSnip' },
-      { 'rafamadriz/friendly-snippets' },
     }
   }
   use { 'github/copilot.vim' }
+  use { "nvim-telescope/telescope-file-browser.nvim" }
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use { 'norcalli/nvim-colorizer.lua'}
+  use { 'glepnir/lspsaga.nvim'}
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'MunifTanjim/prettier.nvim' }
 end)
