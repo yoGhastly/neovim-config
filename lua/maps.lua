@@ -72,7 +72,7 @@ nmap <Leader>cs :CocDisable<CR>
 "cerrar buffer
 nmap <leader>bd :bdelete<CR>
 set completeopt=menuone,noinsert,noselect
-hi Normal guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
 "Close tags automatically
 "Cerrar tags automaticamente
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'

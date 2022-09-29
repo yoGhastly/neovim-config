@@ -5,4 +5,4 @@ vim.g.tokyonight_italic_keywords = false
 vim.g.tokyonight_italic_functions = false
 vim.g.tokyonight_style = "storm"
 
-vim.cmd[[colorscheme tokyonight]]
+--vim.cmd [[colorscheme tokyonight]]

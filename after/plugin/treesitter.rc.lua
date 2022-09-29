@@ -1,4 +1,7 @@
 require 'nvim-treesitter.install'.compilers = { "gcc" }
+
+local rainbow = { "#fafafa","#9F51B6","#F7C244","#F07850","#9CDD29","#0098FA" }
+
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -8,13 +11,10 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = true,
   },
-
-  rainbow = {
-    enable = true,
-    -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-    max_file_lines = nil, -- Do not enable for files with more than n lines, int
-    -- colors = {}, -- table of hex strings
-    -- termcolors = {} -- table of colour name strings
-  }
+	rainbow = { colors = rainbow, termcolors = rainbow }, 
 }
+
+
+for i, c in ipairs(rainbow) do -- p00f/rainbow#81
+	vim.cmd(("hi rainbowcol%d guifg=%s"):format(i, c))
+end
