@@ -1,4 +1,5 @@
 vim.g.material_style = "palenight"
+--[=====[ 
 require('material').setup({
 
   contrast = {
@@ -64,5 +65,10 @@ require('material').setup({
     mini = true,
   }
 })
+<<<<<<< HEAD
 --vim.cmd 'colorscheme material'
 
+=======
+vim.cmd 'colorscheme material'
+--]=====]
+>>>>>>> ce2e9f94d973a1679e30f3d7066522cf5edba080
