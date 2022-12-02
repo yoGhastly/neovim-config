@@ -8,15 +8,15 @@ local lualine = require('lualine')
 local colors = {
   bg       = '#202328',
   fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
+  yellow   = '#fffac2',
   cyan     = '#008080',
   darkblue = '#081633',
-  green    = '#98be65',
+  green    = '#5de4c7',
   orange   = '#FF8800',
   violet   = '#a9a1e1',
-  magenta  = '#c678dd',
+  magenta  = '#add7ff',
   blue     = '#51afef',
-  red      = '#ec5f67',
+  red      = '#d0679d',
 }
 
 local conditions = {
@@ -82,7 +82,7 @@ ins_left {
   function()
     return '▊'
   end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
+  color = { fg = colors.green }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 }
 
@@ -91,7 +91,7 @@ ins_left {
   function()
     -- auto change color according to neovims mode
     local mode_color = {
-      n = colors.red,
+      n = colors.yellow,
       i = colors.green,
       v = colors.blue,
       [''] = colors.blue,
@@ -212,12 +212,12 @@ ins_right {
   function()
     return '▊'
   end,
-  color = { fg = colors.blue },
+  color = { fg = colors.green },
   padding = { left = 1 },
 }
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
 require('lualine').setup({
-  options = { theme = 'tokyonight' }
+  options = { theme = 'poimandres' }
 })
