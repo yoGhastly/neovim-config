@@ -69,10 +69,10 @@ packer.startup(function(use)
   }
   use { 'github/copilot.vim' }
   use { 'norcalli/nvim-colorizer.lua' }
+  use { "ellisonleao/gruvbox.nvim" }
   use { 'glepnir/lspsaga.nvim' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
   use { 'MunifTanjim/prettier.nvim' }
-  use 'marko-cerovac/material.nvim'
   -- If you are using Packer
   use 'shaunsingh/nord.nvim'
 
@@ -86,4 +86,13 @@ packer.startup(function(use)
       }
     end
   }
+  use({
+    "roobert/tailwindcss-colorizer-cmp.nvim",
+    -- optionally, override the default options:
+    config = function()
+      require("tailwindcss-colorizer-cmp").setup({
+        color_square_width = 2,
+      })
+    end
+  })
 end)

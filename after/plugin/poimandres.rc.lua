@@ -7,5 +7,5 @@ require('poimandres').setup {
   disable_italics = false, -- disable italics
 }
 
-vim.cmd('colorscheme poimandres')
+--vim.cmd('colorscheme poimandres')
 
