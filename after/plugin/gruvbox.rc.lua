@@ -1,7 +1,7 @@
 -- setup must be called before loading the colorscheme
 -- Default options:
 require("gruvbox").setup({
-  undercurl = false,
+  undercurl = true,
   underline = true,
   bold = true,
   italic = false,
