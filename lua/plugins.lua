@@ -70,6 +70,7 @@ packer.startup(function(use)
   use { 'github/copilot.vim' }
   use { 'norcalli/nvim-colorizer.lua' }
   use { "ellisonleao/gruvbox.nvim" }
+  use 'eddyekofo94/gruvbox-flat.nvim'
   use { 'glepnir/lspsaga.nvim' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
   use { 'MunifTanjim/prettier.nvim' }
@@ -95,4 +96,5 @@ packer.startup(function(use)
       })
     end
   })
+  use { 'mhartington/formatter.nvim' }
 end)
