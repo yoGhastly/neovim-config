@@ -19,8 +19,6 @@ packer.startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-  -- Install without configuration
-  use({ 'projekt0n/github-nvim-theme' })
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
@@ -97,4 +95,6 @@ packer.startup(function(use)
     end
   })
   use { 'mhartington/formatter.nvim' }
+  use { 'jascha030/nitepal.nvim' }
+  use {'gugsrs/vim-moonlight2.vim'}
 end)
