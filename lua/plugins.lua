@@ -96,5 +96,6 @@ packer.startup(function(use)
   })
   use { 'mhartington/formatter.nvim' }
   use { 'jascha030/nitepal.nvim' }
-  use {'gugsrs/vim-moonlight2.vim'}
+  use 'cseelus/nvim-colors-tone'
 end)
+

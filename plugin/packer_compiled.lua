@@ -119,15 +119,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["github-nvim-theme"] = {
+  ["formatter.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
+    path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["gruvbox-flat.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox-flat.nvim",
+    url = "https://github.com/eddyekofo94/gruvbox-flat.nvim"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
@@ -164,6 +169,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nitepal.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nitepal.nvim",
+    url = "https://github.com/jascha030/nitepal.nvim"
+  },
   ["nord.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nord.nvim",
@@ -189,6 +199,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
+  ["nvim-colors-tone"] = {
+    loaded = true,
+    path = "C:\\Users\\Eivan\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colors-tone",
+    url = "https://github.com/cseelus/nvim-colors-tone"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

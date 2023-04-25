@@ -1,3 +1,3 @@
---vim.cmd [[colorscheme nitepal]]
+vim.cmd [[colorscheme nitepal]]
 
 
