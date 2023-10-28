@@ -70,9 +70,6 @@ packer.startup(function(use)
   use { 'glepnir/lspsaga.nvim' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
   use { 'MunifTanjim/prettier.nvim' }
-  -- If you are using Packer
-  use 'shaunsingh/nord.nvim'
-
   use {
     'olivercederborg/poimandres.nvim',
     config = function()
@@ -83,15 +80,12 @@ packer.startup(function(use)
       }
     end
   }
-  use({
-    "roobert/tailwindcss-colorizer-cmp.nvim",
-    -- optionally, override the default options:
-    config = function()
-      require("tailwindcss-colorizer-cmp").setup({
-        color_square_width = 2,
-      })
-    end
-  })
   use { 'mhartington/formatter.nvim' }
-end)
-
+  use {"rebelot/kanagawa.nvim",}
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+  -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} },
+  use 'nvim-telescope/telescope-file-browser.nvim',
+  use ({ 'projekt0n/github-nvim-theme' })
+  } end)

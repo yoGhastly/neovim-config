@@ -16,7 +16,3 @@ require("mason").setup({
 
 require("mason").setup()
 require("mason-lspconfig").setup()
-
-lspconfig.setup {
-  ensure_installed = { "sumneko_lua", "tailwindcss" },
-}

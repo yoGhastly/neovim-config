@@ -12,7 +12,6 @@ local on_attach = function(client, bufnr)
   end
 end
 
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
@@ -22,20 +21,9 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" },
 }
 
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
-  settings = {
-    Lua = {
-      diagnostics = {
-        -- Get the language server to recognize the 'vim' global
-        globals = { "vim" },
-      },
-
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-    },
-  },
+  capabilities = capabilities,
 }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
