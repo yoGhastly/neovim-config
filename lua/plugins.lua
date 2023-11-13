@@ -30,9 +30,6 @@ packer.startup(function(use)
   use {
     'lewis6991/gitsigns.nvim',
   }
-  use {
-    'p00f/nvim-ts-rainbow'
-  }
   use { 'easymotion/vim-easymotion' }
   -- Lua
   use {
@@ -45,6 +42,13 @@ packer.startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
   use { 'windwp/nvim-ts-autotag' }
+  use({
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!:).
+    run = "make install_jsregexp"
+  })
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -65,7 +69,6 @@ packer.startup(function(use)
       { 'L3MON4D3/LuaSnip' },
     }
   }
-  use { 'github/copilot.vim' }
   use { 'norcalli/nvim-colorizer.lua' }
   use { 'glepnir/lspsaga.nvim' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
@@ -87,5 +90,9 @@ packer.startup(function(use)
   -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} },
   use 'nvim-telescope/telescope-file-browser.nvim',
-  use ({ 'projekt0n/github-nvim-theme' })
+  use 'projekt0n/github-nvim-theme',
+  use 'sainnhe/gruvbox-material',
+  use 'HiPhish/rainbow-delimiters.nvim',
+  use 'JoosepAlviste/palenightfall.nvim',
+  use({"petertriho/cmp-git", requires = "nvim-lua/plenary.nvim"})
   } end)

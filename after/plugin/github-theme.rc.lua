@@ -1,5 +1,5 @@
 -- Default options
-require('github-theme').setup({
+--[[require('github-theme').setup({
   options = {
     -- Compiled file's destination location
     compile_path = vim.fn.stdpath('cache') .. '/github-theme',
@@ -44,4 +44,4 @@ require('github-theme').setup({
 })
 
 -- setup must be called before loading
-vim.cmd('colorscheme github_dark_dimmed')
+vim.cmd('colorscheme github_dark_dimmed')]]

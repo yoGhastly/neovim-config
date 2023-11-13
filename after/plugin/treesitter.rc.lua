@@ -1,6 +1,5 @@
 require 'nvim-treesitter.install'.compilers = { "gcc" }
 
-local rainbow = { "#fafafa", "#9F51B6", "#F7C244", "#F07850", "#9CDD29", "#0098FA" }
 
 require 'nvim-treesitter.configs'.setup {
   highlight = {
@@ -13,10 +12,6 @@ require 'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true, disable = { "yaml", "python", "css" } },
-  rainbow = { colors = rainbow, termcolors = rainbow },
 }
 
 
-for i, c in ipairs(rainbow) do -- p00f/rainbow#81
-  vim.cmd(("hi rainbowcol%d guifg=%s"):format(i, c))
-end
